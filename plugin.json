@@ -1,0 +1,41 @@
+{
+    "description": "Monitors AWS DynamoDB Tables",
+    "command": "python -u dynamodb_plugin.py",
+    "icon" : "icon.png",
+    "metrics" : [
+        "NEM_AWS_DYNAMODB_SUCCESSFUL_REQUEST_LATENCY",
+        "NEM_AWS_DYNAMODB_USER_ERRORS",
+        "NEM_AWS_DYNAMODB_SYSTEM_ERRORS",
+        "NEM_AWS_DYNAMODB_THROTTLED_REQUESTS",
+        "NEM_AWS_DYNAMODB_READ_THROTTLE_EVENTS",
+        "NEM_AWS_DYNAMODB_WRITE_THROTTLE_EVENTS",
+        "NEM_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY_UNITS",
+        "NEM_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY_UNITS",
+        "NEM_AWS_DYNAMODB_CONSUMED_READ_CAPACITY_UNITS",
+        "NEM_AWS_DYNAMODB_CONSUMED_WRITE_CAPACITY_UNITS",
+        "NEM_AWS_DYNAMODB_RETURNED_ITEM_COUNT"],
+
+    "dashboards" : [{"name" : "AWS DynamoDB",
+        "layout" : 
+"d-w=3&d-h=3&d-pad=5&d-bg=none&d-g-NEM_AWS_DYNAMODB_CONSUMED_READ_CAPACITY_UNITS=0-0-1-1-t&d-g-NEM_AWS_DYNAMODB_CONSUMED_WRITE_CAPACITY_UNITS=0-0-1-1-b&d-g-NEM_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY_UNITS=0-1-1-1-t&d-g-NEM_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY_UNITS=0-1-1-1-b&d-g-NEM_AWS_DYNAMODB_READ_THROTTLE_EVENTS=0-2-1-1-t&d-g-NEM_AWS_DYNAMODB_WRITE_THROTTLE_EVENTS=0-2-1-1-b&d-g-NEM_AWS_DYNAMODB_USER_ERRORS=1-0-1-1-t&d-g-NEM_AWS_DYNAMODB_SYSTEM_ERRORS=1-0-1-1-b&d-g-NEM_AWS_DYNAMODB_SUCCESSFUL_REQUEST_LATENCY=1-1-1-1&d-g-NEM_AWS_DYNAMODB_RETURNED_ITEM_COUNT=1-2-1-1&d-g-NEM_AWS_DYNAMODB_THROTTLED_REQUESTS=2-0-1-1" }],
+
+    "paramSchema": [
+        {
+            "title": "AWS Access Key Id",
+            "name": "access_key_id",
+            "description": "Access Key for AWS",
+            "type": "string",
+            "default": "",
+            "required": true
+        },
+        {
+            "title": "AWS Secret Key",
+            "name": "secret_key",
+            "description": "Secret Key for AWS",
+            "type": "string",
+            "default": "",
+            "required": true
+        }
+    ]
+}
+
